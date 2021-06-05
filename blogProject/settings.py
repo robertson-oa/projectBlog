@@ -97,13 +97,14 @@ WSGI_APPLICATION = 'blogProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'ec2-3-212-75-25.compute-1.amazonaws.com',
-        'NAME': 'deqf77t4gfq4c8',
-        'PASSWORD': 'a47b1c602edc92e03778f1b7f6a3340d3ccd779a0265c1c6ab019da9b8e216cf',
+        'HOST': 'ec2-35-170-85-206.compute-1.amazonaws.com',
+        'NAME': 'd6pl187p6cd81s',
+        'PASSWORD': 'c166a4887d6a5becd90e9ef5dbd96d4adbbf7c77e7a6f7cfa31048f848114a59',
         'PORT': '5432',
-        'USER': 'argbospfozglnx'
+        'USER': 'ejczvndaiwcudc'
     }
 }
+
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
