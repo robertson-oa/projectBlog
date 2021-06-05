@@ -10,7 +10,6 @@ STATUS = (
 )
 
 class Category(models.Model):
-    #category_id = models.CharField(max_length=10, primary_key=True)
     category_name = models.CharField(max_length=100)
     category_description = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=False, null=False)
@@ -46,7 +45,7 @@ class Post(models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    category = models.ForeignKey(User, on_delete= models.CASCADE, max_length= 200)
+    # category = models.ForeignKey(User, on_delete= models.CASCADE, max_length= 200)
     status = models.IntegerField(choices=STATUS, default=0)
     
 
@@ -114,7 +113,7 @@ class CustomUser(User):
     user_name = models.CharField(max_length=100)
 
     gender = models.CharField(max_length=2, choices=gender_list, default='Male')
-    profile_pic = models.ImageField(upload_to='Media/profile_pics', blank=True)
+    #profile_pic = models.ImageField(upload_to='Media/profile_pics', blank=True)
     profile_desc = models.TextField(max_length=200)
 
 

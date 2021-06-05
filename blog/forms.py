@@ -42,8 +42,8 @@ class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
     class Meta:
         model = CustomUser
-        fields = ['username','email','password','gender','profile_pic','profile_desc']
-   
+        #fields = ['username','email','password','gender','profile_pic','profile_desc']
+        fields = '__all__'
 
 class CreateUserForm(UserCreationForm):
     class Meta:
