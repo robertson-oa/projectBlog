@@ -31,7 +31,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 #DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
-ALLOWED_HOSTS = ['https://mybloinggapp.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['blogappamalitech.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
