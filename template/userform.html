@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UserForm</title>
+    <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous" />
+</head>
+<body>
+    <div class="container">
+        <h1>User form</h1>
+
+        <div class="content">
+            {% block content%}
+<!--{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}-->
+            <form action="#" method="POST">
+            {%csrf_token%}
+
+                <p>{{form.username.label}}
+                    {{form.username}}</p>
+
+                <p>{{form.email.label}}
+                    {{form.email}}</p>
+
+                <p>{{form.password.label}}
+                    {{form.password}}</p>
+
+                <p>{{form.gender.label}}
+                    {{form.gender}}</p>
+
+                <p>{{form.profile_pic.label}}
+                    {{form.profile_pic}}</p>
+
+                <p>{{form.profile_desc.label}}
+                    {{form.profile_desc}}</p>
+
+                {{form.errors}}
+            <hr>
+            <input type="submit" value="Create Account">
+            <p>Already have an account?<a href="{% url 'login' %}">Login</a></p>
+            </form>
+            {% endblock %}
+
+<!--<input class="create2" type="submit" value="CREATE CATEGORY">-->
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
